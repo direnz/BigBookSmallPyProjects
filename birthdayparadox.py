@@ -55,3 +55,19 @@ while True: # Keep asking until the user enters a valid amount.
         break # User has entered a valid amount.
 print()
 
+# Generate and display the birthdays:
+print('Here are', numBDays, 'birthdays:')
+birthdays = getBirthdays(numBDays)
+for i, birthday in enumerate(birthdays):
+    if i != 0:
+        # Display a comma for each birthday after the first birthday.
+        print(', ', end='')
+    monthName = MONTHS[birthday.month - 1]
+    dateText = '{} {}'.format(monthName, birthday.day)
+    print(dateText, end='')
+print()
+print()
+
+# Determine if there are two birthdays that match.
+match = getMatch(birthdays)
+
