@@ -17,3 +17,23 @@ SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # Loop through every possible key: 
 for key in range(len(SYMBOLS)):
+    translated = ''
+
+    # Decrypt each symbol in the message:
+    for symbol in message:
+        if symbol in SYMBOLS:
+            num = SYMBOLS.find(symbol) #get the number of the symbol
+            num = num - key #decrypt the number
+
+            #Handle the wrap-around if num is less than 0:
+            if num < 0:
+                num = num + len(SYMBOLS)
+
+            #Add decrypted number's symbol to translated:
+            translated = translated + SYMBOLS[num]
+        else:
+            #Just add the symbol without encrypting/decrypting:
+            translated = translated + symbol
+
+    #Display the key being tested, along with its decryption:
+    print('Key #{}: {}'.format(key, translated))
