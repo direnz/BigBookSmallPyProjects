@@ -82,3 +82,13 @@ def getCalendarFor(year, month):
     # Add the horizontal line at the very bottom of the calendar.
     calText += weekSeparator
     return calText
+
+calText = getCalendarFor(year, month)
+print(calText) # Display the calendar.
+
+#Save teh calendar to a text file:
+calendarFilename = 'calendar_{}_{}.txt'.format(year, month)
+with open(calendarFilename, 'w') as fileObj:
+    fileObj.write(calText)
+
+print('Saved to ' + calendarFilename)
