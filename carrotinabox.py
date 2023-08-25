@@ -45,4 +45,40 @@ print(p1Name + ',  here is the inside of your box:')
 
 if random.randint(1, 2) == 1:
     carrotInFirstBox = True
-    
+else:
+    carrotInFirstBox = False
+
+if carrotInFirstBox:
+    print('''
+    ___VV____
+   |   VV    |
+   |   VV    |
+   |___||____|    __________
+  /    ||   /|   /         /|
+ +---------+ |  +---------+ |
+ |   RED   | |  |   GOLD  | |
+ |   BOX   | /  |   BOX   | /
+ +---------+/   +---------+/
+  (carrot!)''')
+    print(playerNames)
+else:
+    print('''
+    _________
+   |         |
+   |         |
+   |_________|    __________
+  /         /|   /         /|
+ +---------+ |  +---------+ |
+ |   RED   | |  |   GOLD  | |
+ |   BOX   | /  |   BOX   | /
+ +---------+/   +---------+/
+ (no carrot!)''')
+    print(playerNames)
+
+input('Press Enter to continue...')
+
+print('\n' * 100) #clear the screen by printing several newlines
+print(p1Name + ', tell ' + p2Name + ' to open their eyes.')
+intput('Press Enter to continue...')
+
+print()
