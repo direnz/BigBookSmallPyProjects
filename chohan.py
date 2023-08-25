@@ -32,3 +32,35 @@ while True:
             break #Exit the loop once a valid bet is placed. 
 
     # Roll the dice.
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+
+    print('The dealer swirls the cup and you hear the rattle of dice.')
+    print('The dealer slams the cup on the floor, still covering the dice and asks for your bet.')
+    print()
+    print('    CHO (even) or HAN (odd)?')
+
+    # Let the player bet cho or han:
+    while True:
+        bet = input('> ').upper()
+        if bet != 'CHO' and bet != 'HAN':
+            print('Please enter either "CHO" or "HAN".')
+        else:
+            break
+
+    # Reveal the dice results:
+    print('The dealer lifts the cup to reveal:')
+    print('  ', JAPANESE_NUMBERS[dice1], '-', JAPANESE_NUMBERS[dice2])
+    print('    ', dice1, '-', dice2)
+
+    # Determine if the player won:
+    rollIsEven = (dice1 + dice2) % 2 == 0
+    if rollIsEven:
+        correctBet = 'CHO'
+    else:
+        correctBet = 'HAN'
+
+    playerWon = bet == correctBet
+
+    # Display the bet results:
+    
