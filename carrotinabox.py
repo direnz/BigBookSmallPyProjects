@@ -101,3 +101,53 @@ firstBox = 'RED ' # Note the space after the "D".
 
 secondBox = 'GOLD' 
 
+if response.startswith('Y'):
+    carrotInFirstBox = not carrotInFirstBox
+    firstBox, secondBox = secondBox, firstBox
+
+print(''' HERE ARE THE TWO BOXES:
+      
+   __________     __________
+  /         /|   /         /|
+ +---------+ |  +---------+ |
+ |   {}  | |  |   {}  | |
+ |   BOX   | /  |   BOX   | /
+ +---------+/   +---------+/'''.format(firstBox, secondBox))
+print(playerNames)
+
+input('Press Enter to reveal the winner...')
+print()
+
+if carrotInFirstBox:
+    print('''
+    ___VV____      _________
+   |   VV    |    |         |
+   |   VV    |    |         |
+   |___||____|    |_________|
+  /    ||   /|   /         /|
+ +---------+ |  +---------+ |
+ |   {}  | |  |   {}  | |
+ |   BOX   | /  |   BOX   | /
+ +---------+/   +---------+/'''.format(firstBox, secondBox))
+
+else:
+    print('''
+    _________      ___VV____
+   |         |    |   VV    |
+   |         |    |   VV    |
+   |_________|    |___||____|
+  /         /|   /    ||   /|
+ +---------+ |  +---------+ |
+ |   {}  | |  |   {}  | |
+ |   BOX   | /  |   BOX   | /
+ +---------+/   +---------+/'''.format(firstBox, secondBox))
+
+print(playerNames)
+
+#this Modification made possible through the 'carrotInFirstBox' variable
+if carrotInFirstBox:
+    print(p1Name + ' is the winner!')
+else:
+    print(p2Name + ' is the winner!')
+
+print('Thanks for playing!')
