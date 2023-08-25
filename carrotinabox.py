@@ -22,4 +22,27 @@ p1Name = input('Human player 1, enter your name: ')
 p2Name = input('Human player 2, enter your name: ')
 playerNames = p1Name[:11].center(11) + '  ' + p2Name[:11].center(11)
 
-print('''HERE ARE TWO BOXES:)
+print('''HERE ARE TWO BOXES:
+  __________     __________
+ /         /|   /         /|
++---------+ |  +---------+ |
+|   RED   | |  |   GOLD  | |
+|   BOX   | /  |   BOX   | /
++---------+/   +---------+/''')
+
+print()
+print(playerNames)
+print()
+print(p1Name + ', you have a RED box in front of you.')
+print(p2Name + ', you have a GOLD box in front of you.')
+print()
+print(p1Name + ', you will get to look into your box.')
+print(p2Name.upper() + ', close your eyes and don\'t look!!!.')
+input('When ' + p2Name + ' has closed their eyes, press Enter...')
+print()
+
+print(p1Name + ',  here is the inside of your box:')
+
+if random.randint(1, 2) == 1:
+    carrotInFirstBox = True
+    
