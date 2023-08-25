@@ -63,4 +63,18 @@ while True:
     playerWon = bet == correctBet
 
     # Display the bet results:
-    
+    if playerWon:
+        print('You won! You take', pot. 'mon.')
+        purpse = purse + pot # add the pot from player's purse
+        print('The house collects a', pot //10, 'mon fee.')
+        purse = purse - (pot // 10) # the house fee is 10% and will be subtracted from winnings
+    else:
+        purse = purse - pot #subtract the pot from player's purse
+        print('You lost!')
+
+    # Check if the player has run out of money:
+    if purse == 0:
+        print('You have run out of money!')
+        print('Thanks for playing!')
+        sys.exit()
+        
