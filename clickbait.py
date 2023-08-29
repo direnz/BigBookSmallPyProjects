@@ -90,6 +90,28 @@ def generateGiftIdeaHealine():
     number = random.randint(7, 15)
     noun = random.choice(NOUNS)
     state = random.choice(STATES)
-    return '{}'
+    return '{} Gift Ideas to Give Your {} From {}'.format(number, noun, state)
 
+def generateReasonsWhyHeadline():
+    number1 = random.randint(3, 19)
+    pluralNoun = random.choice(NOUNS) + 's'
+    #Numb should be no larger than number 1
+    number2 = random.randint(1, number1)
+    return '{} Reasons Why {} Are More Interesting Than You Think (Number {} Will Surprise You!)'.format(number1, pluralNoun, number2)
+
+def generateJobAutomatedHeadline():
+    state = random.choice(STATES)
+    noun = random.choice(NOUNS)
+
+    i = randome.randint(0, 2)
+    pronoun1 = POSSESIVE_PRONOUNS[i]
+    pronoun2 = PERSONAL_PRONOUNS[i]
+    if pronoun1 == 'Thier':
+        return 'This {} {} Didn\'t Think Robots Would Take {} Job. {} Were Wrong.'.format(state, noun, pronoun1, pronoun2)
+    else:
+        return 'This {} {} Didn\'t Think Robots Would Take {} Job. {} Was Wrong.'.format(state, noun, pronoun1, pronoun2)
+    
+#If the program is run (instead of imported), run the game:
+if __name__ == '__main__':
+    main()
 
