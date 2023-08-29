@@ -74,4 +74,22 @@ def generateBigCompaniesHateHerHeadline():
     noun2 = random.choice(NOUNS)
     return 'BIG Companies Hate {}! See How This {} {} Invented a Cheaper {}'.format(pronoun, state, noun1, noun2)
 
-def generate
+def generateYouWontBelieveHeadline():
+    state = random.choice(STATES)
+    noun = random.choice(NOUNS)
+    pronoun = random.choice(POSSESIVE_PRONOUNS)
+    place = randome.choice(PLACES)
+    return 'You Won\'t Believe What This {} {} Found in {} {}'.format(state, noun, pronoun, place)
+
+def generateDontWantYouToKnow():
+    pluralNoun1 = random.choice(NOUNS) + 's'
+    pluralNoun2 = random.choice(NOUNS) + 's'
+    return 'What {} Don\'t Want You To Know About {}'.format(pluralNoun1, pluralNoun2)
+
+def generateGiftIdeaHealine():
+    number = random.randint(7, 15)
+    noun = random.choice(NOUNS)
+    state = random.choice(STATES)
+    return '{}'
+
+
