@@ -53,7 +53,7 @@ def main():
     print()
 
     website = random.choice(['wobsite', 'blag', 'Facebuuk', 'Googles', 'Facesbook', 'Tweedie', 'Pastagram'])
-    when = randome.choice(WHEN).lower()
+    when = random.choice(WHEN).lower()
     print('Post these to our', website, when, 'or you\'re fired!')
 
 #Each of these functions returns a different type of clickbait headline:
@@ -65,7 +65,7 @@ def generateWhatYouDontKnowHeadline():
     noun = random.choice(NOUNS)
     pluralNoun = random.choice(NOUNS)
     when = random.choice(WHEN)
-    return 'Without This {}, {} Could Kill You {}'.format(noun, plurlaNoun, when)
+    return 'Without This {}, {} Could Kill You {}'.format(noun, pluralNoun, when)
 
 def generateBigCompaniesHateHerHeadline():
     pronoun = random.choice(OBJECT_PRONOUNS)
@@ -78,15 +78,15 @@ def generateYouWontBelieveHeadline():
     state = random.choice(STATES)
     noun = random.choice(NOUNS)
     pronoun = random.choice(POSSESIVE_PRONOUNS)
-    place = randome.choice(PLACES)
+    place = random.choice(PLACES)
     return 'You Won\'t Believe What This {} {} Found in {} {}'.format(state, noun, pronoun, place)
 
-def generateDontWantYouToKnow():
+def generateDontWantYouToKnowHeadline():
     pluralNoun1 = random.choice(NOUNS) + 's'
     pluralNoun2 = random.choice(NOUNS) + 's'
     return 'What {} Don\'t Want You To Know About {}'.format(pluralNoun1, pluralNoun2)
 
-def generateGiftIdeaHealine():
+def generateGiftIdeaHeadline():
     number = random.randint(7, 15)
     noun = random.choice(NOUNS)
     state = random.choice(STATES)
@@ -103,7 +103,7 @@ def generateJobAutomatedHeadline():
     state = random.choice(STATES)
     noun = random.choice(NOUNS)
 
-    i = randome.randint(0, 2)
+    i = random.randint(0, 2)
     pronoun1 = POSSESIVE_PRONOUNS[i]
     pronoun2 = PERSONAL_PRONOUNS[i]
     if pronoun1 == 'Thier':
