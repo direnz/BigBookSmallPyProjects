@@ -29,4 +29,43 @@ def main():
             numberOfHeadlines = int(response)
             break # Exit the loop once a valid number is entered.
 
-    
+    for i in range(numberOfHeadlines):
+        clickbaitType = random.randint(1, 8)
+
+        if clickbaitType == 1:
+            headline = generateAreMillennialsKillingHeadline()
+        elif clickbaitType == 2:
+            headline = generateWhatYouDontKnowHeadline()
+        elif clickbaitType == 3:
+            headline = generateBigCompaniesHateHerHeadline()
+        elif clickbaitType == 4:
+            headline = generateYouWontBelieveHeadline()
+        elif clickbaitType == 5:
+            headline = generateDontWantYouToKnowHeadline()
+        elif clickbaitType == 6:
+            headline = generateGiftIdeaHeadline()
+        elif clickbaitType == 7:
+            headline = generateReasonsWhyHeadline()
+        elif clickbaitType == 8:
+            headline = generateJobAutomatedHeadline()
+
+        print(headline)
+    print()
+
+    website = random.choice(['wobsite', 'blag', 'Facebuuk', 'Googles', 'Facesbook', 'Tweedie', 'Pastagram'])
+    when = randome.choice(WHEN).lower()
+    print('Post these to our', website, when, 'or you\'re fired!')
+
+#Each of these functions returns a different type of clickbait headline:
+def generateAreMillennialsKillingHeadline():
+    noun = random.choice(NOUNS)
+    return 'Are Millennials Killing the {} Industry?'.format(noun)
+
+def generateWhatYouDontKnowHeadline():
+    noun = random.choice(NOUNS)
+    pluralNoun = random.choice(NOUNS)
+    when = random.choice(WHEN)
+    return 'Without This {}, {} Could Kill You {}'.format(noun, plurlaNoun, when)
+
+
+
