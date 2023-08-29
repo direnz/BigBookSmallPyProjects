@@ -15,3 +15,18 @@ PLACES = ['House', 'Attic', 'Bank Deposit Box', 'School', 'Basement','Workplace'
 WHEN = ['Soon', 'This Year', 'Later Today', 'RIGHT NOW', 'Next Week']
 
 def main():
+    print('Clickbait Headline Generator')
+    print('By Al Sweigart al@inventwithpython.com')
+    print()
+
+    print('Our website needs to trick people into looking at ads!')
+    while True:
+        print('Enter the number of clickbait headlines to generate:')
+        response = input('> ')
+        if not response.isdecimal():
+            print('Please enter a number.')
+        else:
+            numberOfHeadlines = int(response)
+            break # Exit the loop once a valid number is entered.
+
+    
