@@ -67,5 +67,11 @@ def generateWhatYouDontKnowHeadline():
     when = random.choice(WHEN)
     return 'Without This {}, {} Could Kill You {}'.format(noun, plurlaNoun, when)
 
+def generateBigCompaniesHateHerHeadline():
+    pronoun = random.choice(OBJECT_PRONOUNS)
+    state = random.choice(STATES)
+    noun1 = random.choice(NOUNS)
+    noun2 = random.choice(NOUNS)
+    return 'BIG Companies Hate {}! See How This {} {} Invented a Cheaper {}'.format(pronoun, state, noun1, noun2)
 
-
+def generate
